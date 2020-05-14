@@ -50,4 +50,57 @@ class Utils {
       ),
     );
   }
+
+
+  Widget songName() {
+    return Column(
+      children: <Widget>[
+        Text('Drunk on Corona', style: kSongTitle,
+
+
+        ),
+        Text('Drink up and Rest', style: kSubtitle),
+      ],
+    );
+  }
+
+  Widget progressBar() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 30.0, right: 30.0, top: 10.0),
+      child: Stack(
+        children: <Widget>[
+          Container(
+            height: 10,
+            decoration: kProgressDec,
+          ),
+          Container(
+            height: 10.0,
+            width: 80.0,
+            decoration: kProgressDec.copyWith(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.white70,
+                  Colors.grey[700],
+                ]
+
+              ),
+
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+
+
+  Widget songTime() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 30.0, right: 30, top:20.0,),
+      child: Row(children: <Widget>[
+        Expanded(child: Text("1:24"),),
+        Expanded(child: Text("6.00", textAlign: TextAlign.right,),),
+      ],),
+    );
+  }
 }

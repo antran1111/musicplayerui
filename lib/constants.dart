@@ -15,3 +15,34 @@ BoxDecoration kBoxDec1 = BoxDecoration(
           blurRadius: 6.0,
           offset: Offset(-6, 2)),
     ]);
+
+
+TextStyle kSongTitle = TextStyle(
+  fontSize: 24.0,
+  fontWeight: FontWeight.bold,
+
+);
+
+TextStyle kSubtitle = TextStyle(
+  fontSize: 16.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.grey,
+
+);
+
+
+
+BoxDecoration kProgressDec = BoxDecoration(
+    borderRadius: BorderRadius.circular(15.0),
+    border: Border.all(color: Colors.white,),
+    color: Colors.white,
+    gradient: LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [
+        Colors.white70,
+        Colors.grey[700],
+
+      ],
+    )
+);

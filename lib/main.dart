@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Corona Music Player',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -38,6 +38,9 @@ class Home extends StatelessWidget {
           children: <Widget>[
             Utils().appBar(),
             Utils().albumImage(context),
+            Utils().songName(),
+            Utils().progressBar(),
+            Utils().songTime(),
 
           ],
         ),
