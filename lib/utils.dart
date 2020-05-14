@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:musicplayerui/constants.dart';
+
+
 
 class Utils {
   Widget appBar() {
@@ -103,4 +106,68 @@ class Utils {
       ],),
     );
   }
+
+  Widget songsButton(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Container(
+            padding: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+                color: Color(0xFFF4EFF6),
+                borderRadius: BorderRadius.circular(100.0),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color.fromRGBO(0, 0, 0, 10),
+                      spreadRadius: 3.0,
+                      blurRadius: 6.0,
+                      offset: Offset(6, 2)),
+                  BoxShadow(
+                      color: Color.fromRGBO(255, 255, 255, 0.9),
+                      spreadRadius: 3.0,
+                      blurRadius: 6.0,
+                      offset: Offset(-6, 2)),
+                ]),
+            child: Icon(CupertinoIcons.heart_solid)),
+        SongsButtonCard(
+          icon: Icons.fast_rewind,
+        ),
+
+      ],
+    );
+
+
+  }
 }
+
+
+class SongsButtonCard extends StatelessWidget {
+  final icon;
+
+  SongsButtonCard({this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return   Container(
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+            color: Color(0xFFF4EFF6),
+            borderRadius: BorderRadius.circular(100.0),
+            boxShadow: [
+              BoxShadow(
+                  color: Color.fromRGBO(0, 0, 0, 10),
+                  spreadRadius: 3.0,
+                  blurRadius: 6.0,
+                  offset: Offset(6, 2)),
+              BoxShadow(
+                  color: Color.fromRGBO(255, 255, 255, 0.9),
+                  spreadRadius: 3.0,
+                  blurRadius: 6.0,
+                  offset: Offset(-6, 2)),
+            ]),
+        child: Icon(icon));
+
+//        child: Icon(CupertinoIcons.heart_solid));
+  }
+}
+
