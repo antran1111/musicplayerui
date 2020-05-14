@@ -9,9 +9,9 @@ class Utils {
     return Row(
       children: <Widget>[
         Container(
-            padding: EdgeInsets.all(5.0),
+            padding: EdgeInsets.all(2.0),
             decoration: BoxDecoration(
-                color: Color(0xFFF4EFF6),
+                color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(100.0),
                 boxShadow: [
                   BoxShadow(
@@ -20,10 +20,10 @@ class Utils {
                       blurRadius: 6.0,
                       offset: Offset(6, 2)),
                   BoxShadow(
-                      color: Color.fromRGBO(255, 255, 255, 0.9),
+                      color: Color.fromRGBO(100, 255, 255, 0.9),
                       spreadRadius: 3.0,
                       blurRadius: 6.0,
-                      offset: Offset(-6, 2)),
+                      offset: Offset(-1, 1)),
                 ]),
             child: Icon(Icons.arrow_back_ios)),
         Expanded(
@@ -99,7 +99,7 @@ class Utils {
 
   Widget songTime() {
     return Padding(
-      padding: const EdgeInsets.only(left: 30.0, right: 30, top:20.0,),
+      padding: const EdgeInsets.only(left: 30.0, right: 30, top:20.0,bottom: 10),
       child: Row(children: <Widget>[
         Expanded(child: Text("1:24"),),
         Expanded(child: Text("6.00", textAlign: TextAlign.right,),),
@@ -135,16 +135,13 @@ class Utils {
 
   Widget endButton() {
     return Padding(
-      padding: const EdgeInsets.only(left: 30, right: 30, top:10.0,),
+      padding: EdgeInsets.all(26),
+//      padding: const EdgeInsets.only(left: 50, right: 30, top:20.0,),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-        Expanded(child: Align(
-            alignment: Alignment.centerLeft,
-            child: Icon(Icons.share,)),),
-        Expanded(child: Align(
-          alignment: Alignment.centerRight,
-        child: Icon(Icons.pool))),
+        Expanded(child: Icon(Icons.share, size: 50,),),
+        Expanded(child: Icon(Icons.pool, size: 50,)),
       ],),
     );
   }
@@ -159,21 +156,22 @@ class SongsButtonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Container(
-        padding: EdgeInsets.all(6.0),
+        padding: EdgeInsets.all(8.0),
         decoration: BoxDecoration(
-            color: Color(0xFFF4EFF6),
+          color: Colors.blueAccent,
+//            color: Color(0xFFF4EFF6),
             borderRadius: BorderRadius.circular(100.0),
             boxShadow: [
               BoxShadow(
                   color: Color.fromRGBO(0, 0, 0, .3),
                   spreadRadius: 3.0,
                   blurRadius: 6.0,
-                  offset: Offset(6, 2)),
+                  offset: Offset(6, 10)),
               BoxShadow(
-                  color: Color.fromRGBO(255, 255, 255, 0.9),
+                  color: Color.fromRGBO(100, 155, 255, 0.9),
                   spreadRadius: 3.0,
                   blurRadius: 6.0,
-                  offset: Offset(-6, 2)),
+                  offset: Offset(-1, 4)),
             ]),
         child: Icon(icon));
 
