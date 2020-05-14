@@ -42,6 +42,7 @@ class Home extends StatelessWidget {
             Utils().progressBar(),
             Utils().songTime(),
             Utils().songsButton(),
+            Utils().endButton(),
 
           ],
         ),
